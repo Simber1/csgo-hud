@@ -128,13 +128,13 @@
 			</div>
 			<div class="input-group primary-team">
 				<label for="primary-team">
-					Name of Team on the left
+					Name of the Counter Terrorist Team
 				</label>
 				<input type="text" id="primary-team" v-model="leftTeamName">
 			</div>
 			<div class="input-group primary-team">
 				<label for="primary-team">
-					Name of Team on the right
+					Name of the Terrorist Team
 				</label>
 				<input type="text" id="primary-team" v-model="rightTeamName">
 			</div>
