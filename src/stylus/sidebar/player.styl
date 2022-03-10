@@ -1,12 +1,12 @@
 .player {
-	$rowHeight = 1.9em
+	$rowHeight = 2.3em
 
 	color #fff
 	line-height $rowHeight
 
 	display grid
 	grid-template-rows $rowHeight $rowHeight
-	grid-template-columns 1rem 3ch 2rem 1ch .5rem 6ch 2rem 5ch 5ch 2.5rem 3ch 2rem 2rem 6rem .5rem .5rem max-content
+	grid-template-columns 1rem 3ch 2rem 1ch .5rem 5ch 2rem 5ch 5ch 2.5rem 3ch 2rem 2rem 6rem .5rem .5rem max-content
 	grid-template-areas: \
 		'paddingLeft health 0 slot 1 name name name name name roundKills 3 primary primary paddingRight focused stats' \
 		'paddingLeft equipment equipment equipment 1 money 5 kills deaths grenades grenades grenades grenades secondary paddingRight focused stats'
@@ -219,7 +219,7 @@
 
 	.money-spent {
 		grid-area 2/kills/2/deaths
-		color $red
+		color #d13636
 		text-align left
 	}
 
