@@ -2,9 +2,8 @@
 	<div :class="['focused-player', { '--active': active }]">
 		<div :class="`life --${side}`">
 			<div class="inner">
-				<div class="health">
+				<div :class="['health',{'--red':player.state.health < 21 }]">
 					<img src="../../img/health.svg">
-
 					<div :class="['number',{'--red': player.state.health < 21 }]">
 						<div v-for="digit in ((player.state.health + '') || '').padStart(3)" class="digit">
 							{{ digit }}
