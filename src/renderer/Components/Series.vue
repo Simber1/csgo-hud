@@ -30,8 +30,8 @@
 
 				<div class="text">
 					<div class="map-name">{{ formatMapName(match.map) }}</div>
-					<div class="pick-heading">{{ match.picked ? 'Pick' : 'Decider' }}</div>
-					<div class="pick-team">{{ match.picked ? teams[match.picked].name || '&nbsp;' : '&nbsp;' }}</div>
+					<div class="pick-team">{{ match.picked ? 'Picked By:' : 'Decider' }}</div>
+					<div class="pick-team">{{ match.picked == 1 ? rightTeamName || '&nbsp;' : match.picked == 0 ? leftTeamName || '&nbsp;': '&nbsp;' }}</div>
 				</div>
 			</div>
 		</div>
@@ -58,6 +58,8 @@ export default {
 			'map',
 			'series',
 			'timers',
+			'leftTeamName',
+			'rightTeamName',
 		]),
 
 		active() {
