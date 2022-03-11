@@ -29,7 +29,7 @@
 				</div>
 
 				<div :class="`team-name --${direction} --${directionalSides[Number(direction === 'right')]}`">
-					{{ team.name || (directionalSides[Number(direction === 'right')] === 'ct' ?  leftTeamName  : rightTeamName) }}
+					{{ [Number(direction === 'left')] == 1 ?  leftTeamName  : rightTeamName }} 
 				</div>
 
 				<div :class="`round-wins --${direction}`">
@@ -143,6 +143,26 @@ export default {
 					left: this.series.reduce((wins, match) => wins + (match.scoreLeft > match.scoreRight), 0),
 					right: this.series.reduce((wins, match) => wins + (match.scoreLeft < match.scoreRight), 0),
 				},
+			}
+		},
+
+
+		calcLeftTeamName(){
+			if(this.half % 2 === 1){ //Left Team on CT
+				return this.leftTeamName
+			}
+			else{ // Right Team on CT
+				return this.rightTeamName
+			}
+		},
+
+		
+		calcRightTeamName(){
+			if(this.half % 2 === 1){ //Left Team on CT
+				return this.rightTeamName
+			}
+			else{ // Right Team on CT
+				return this.leftTeamName
 			}
 		},
 

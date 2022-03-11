@@ -15,7 +15,7 @@
 
 				<div class="inner">
 					<div :class="`team-name --${win_team}`">
-						{{ team.name || (win_team === 'ct' ? leftTeamName : rightTeamName) }}
+						{{ win_team === 'ct' ? calcLeftTeamName : calcRightTeamName }}
 					</div>
 
 					<div class="phrase">
@@ -83,6 +83,32 @@ export default {
 			if (this.map.round_wins[latestRound].endsWith('_bomb')) return 'by Detonating the Bomb'
 			if (this.map.round_wins[latestRound].endsWith('_defuse')) return 'by Defusing the Bomb'
 			if (this.map.round_wins[latestRound].endsWith('_time')) return 'by Running down the Clock'
+		},
+
+		half() {
+			if (this.map.round < 15) return 1
+			if (this.map.round < 30) return 2
+
+			return 2 + Math.ceil((this.map.round - 29) / 3)
+		},
+		
+		calcLeftTeamName(){
+			if(this.half % 2 === 1){ //Left Team on CT
+				return this.leftTeamName
+			}
+			else{ // Right Team on CT
+				return this.rightTeamName
+			}
+		},
+
+		
+		calcRightTeamName(){
+			if(this.half % 2 === 1){ //Left Team on CT
+				return this.rightTeamName
+			}
+			else{ // Right Team on CT
+				return this.leftTeamName
+			}
 		},
 	},
 
