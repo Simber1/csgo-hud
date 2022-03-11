@@ -122,7 +122,7 @@
 		<section v-else-if="activeTab === 'series'">
 			<div class="input-group primary-team">
 				<label for="primary-team">
-					Name of Team that should be on the left (otherwise, CT will be on the left)
+					Name of Team that should be on the left (otherwise, CT will be on the left) (Doesn't work right now)
 				</label>
 				<input type="text" id="primary-team" v-model="primaryTeam">
 			</div>
