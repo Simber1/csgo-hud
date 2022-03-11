@@ -6,7 +6,7 @@
 				Global Offensive
 			</div>
 
-			<img class="wheelchair-man" :src="require('../../../img/NUEL_Full_Light_Vertical.svg')" alt="">
+			<img class="wheelchair-man" :src="require('../../../img/nuel/NUEL_Full_Light_Vertical.svg')" alt="">
 
 			<div class="subtext">
 				Spring 2022
