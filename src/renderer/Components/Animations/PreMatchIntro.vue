@@ -1,6 +1,6 @@
 <template>
 	<div v-if="active && series && series.length" class="pre-match-intro">
-		<Marquees />
+		<!-- <Marquees /> -->
 		<GenericBackground />
 
 		<div class="series --active">
@@ -41,14 +41,14 @@
 							<template v-else>&nbsp;</template>
 						</div>
 
-						<div class="pick-heading">{{ match.picked ? 'Pick' : 'Decider' }}</div>
-						<div class="pick-team">{{ match.picked ? teams[match.picked].name || '&nbsp;' : '&nbsp;' }}</div>
+					<div class="pick-team">{{ match.picked ? 'Picked By:' : 'Decider' }}</div>
+					<div class="pick-team">{{ match.picked == 1 ? rightTeamName || '&nbsp;' : match.picked == 0 ? leftTeamName || '&nbsp;' : '&nbsp;' }}</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<Skillgroups />
+		<!-- <Skillgroups /> -->
 		<Logo />
 	</div>
 </template>
@@ -60,15 +60,13 @@ import flagStyle from '../../flag-style'
 import formatMapName from '../../map-names'
 import GenericBackground from './GenericBackground'
 import Logo from './Logo'
-import Marquees from './Marquees'
-import Skillgroups from './Skillgroups'
+// import Marquees from './Marquees'
 
 export default {
 	components: {
 		GenericBackground,
 		Logo,
-		Marquees,
-		Skillgroups,
+		// Marquees,
 	},
 
 	props: [
@@ -98,6 +96,8 @@ export default {
 			'map',
 			'preMatchIntroMusicPath',
 			'series',
+			'rightTeamName',
+			'leftTeamName',
 		]),
 
 		teams() {

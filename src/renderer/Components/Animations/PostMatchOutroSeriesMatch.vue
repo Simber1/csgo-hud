@@ -32,8 +32,8 @@
 					<template v-else>&nbsp;</template>
 				</div>
 
-				<div class="pick-heading">{{ match.picked ? 'Pick' : 'Decider' }}</div>
-				<div class="pick-team">{{ match.picked ? teams[match.picked].name || '&nbsp;' : '&nbsp;' }}</div>
+				<div class="pick-team">{{ match.picked ? 'Picked By:' : 'Decider' }}</div>
+				<div class="pick-team">{{ match.picked == 1 ? rightTeamName || '&nbsp;' : match.picked == 0 ? leftTeamName || '&nbsp;' : '&nbsp;' }}</div>
 			</div>
 		</div>
 	</div>
@@ -42,6 +42,7 @@
 <script>
 import flagStyle from '../../flag-style'
 import formatMapName from '../../map-names'
+import { mapGetters } from 'vuex'
 
 export default {
 	props: [
@@ -52,6 +53,10 @@ export default {
 	],
 
 	computed: {
+		...mapGetters([
+			'rightTeamName',
+			'leftTeamName',
+		]),
 		scoreLeft() {
 			return (this.match.currentlyPlaying)
 				? this.teams[0].score

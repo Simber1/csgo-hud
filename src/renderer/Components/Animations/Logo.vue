@@ -6,10 +6,10 @@
 				Global Offensive
 			</div>
 
-			<img class="wheelchair-man" :src="require('../../../img/wheelchair-man/orange.svg')" alt="">
+			<img class="wheelchair-man" :src="require('../../../img/NUEL_Full_Light_Vertical.svg')" alt="">
 
-			<div class="paralympics">
-				Paralympics
+			<div class="subtext">
+				Spring 2022
 			</div>
 
 			<div v-if="seriesName.length === 1 || seriesName.length === 3" class="meta">

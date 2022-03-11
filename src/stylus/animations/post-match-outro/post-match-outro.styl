@@ -28,29 +28,18 @@ postMatchOutroSeconds(seconds) {
 
 @keyframes postMatchOutroLogoShrinkIn {
 	from,
-	{postMatchOutroSeconds(10.8)} {
+	{postMatchOutroSeconds(7.2)} {
 		opacity 0
 		transform scale(1.05)
 	}
 
-	{postMatchOutroSeconds(11.2)},
+	{postMatchOutroSeconds(7.8)},
 	{postMatchOutroSeconds(13)} {
 		opacity 1
 		transform scale(1)
 	}
 }
 
-@keyframes postMatchOutroMarqueeTop {
-	to {
-		transform translateX(-200rem)
-	}
-}
-
-@keyframes postMatchOutroMarqueeBottom {
-	to {
-		transform translateX(200rem)
-	}
-}
 
 .post-match-outro {
 	position fixed
@@ -64,8 +53,6 @@ postMatchOutroSeconds(seconds) {
 
 	animationsGenericBackground()
 	animationsLogo(postMatchOutroLogoShrinkIn, $postMatchOutroSeconds)
-	animationsMarquee(postMatchOutroMarqueeTop, postMatchOutroMarqueeBottom)
-	animationsSkillgroups(7s)
 
 	@require 'series'
 }

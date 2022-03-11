@@ -1,6 +1,6 @@
 <template>
 	<div v-if="active && series && series.length" class="post-match-outro">
-		<Marquees />
+		<!-- <Marquees /> -->
 		<GenericBackground />
 
 		<div :class="['series --active', { '--completed': seriesCompleted }]">
@@ -14,7 +14,6 @@
 			/>
 		</div>
 
-		<Skillgroups />
 		<Logo />
 	</div>
 </template>
@@ -24,17 +23,16 @@ import * as fs from 'fs'
 import { mapGetters } from 'vuex'
 import GenericBackground from './GenericBackground'
 import Logo from './Logo'
-import Marquees from './Marquees'
+// import Marquees from './Marquees'
 import PostMatchOutroSeriesMatch from './PostMatchOutroSeriesMatch'
-import Skillgroups from './Skillgroups'
+
 
 export default {
 	components: {
 		GenericBackground,
 		Logo,
-		Marquees,
+		// Marquees,
 		PostMatchOutroSeriesMatch,
-		Skillgroups,
 	},
 
 	props: [
@@ -67,6 +65,8 @@ export default {
 			'map',
 			'postMatchOutroMusicPath',
 			'series',
+			'rightTeamName',
+			'leftTeamName',
 		]),
 
 		seriesCompleted() {
