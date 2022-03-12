@@ -126,7 +126,7 @@ export default {
 
 			try {
 				const player = Object.values(this.allplayers)[0]
-
+				//TODO: Fix this, breaks when player leaves too early
 				if ([1, 2, 3, 4, 5].includes(player.observer_slot)) {
 					if (player.team === 'CT') return ['ct', 't']
 					return ['t', 'ct']
