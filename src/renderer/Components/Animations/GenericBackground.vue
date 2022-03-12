@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<video class="generic-background" :src="videoBlobUrl" autoplay></video>
+		<video class="generic-background" :src="videoBlobUrl" autoplay loop></video>
 		<div class="generic-background-blur"></div>
 	</div>
 </template>
