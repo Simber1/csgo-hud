@@ -1,14 +1,14 @@
 module.exports = {
 	packagerConfig: {
-		executableName: 'csgo-hud',
+		executableName: 'CSGO-Hud',
 	},
 	makers: [
 		{
 			name: '@electron-forge/maker-squirrel',
 			config: {
-				authors: ['drweissbrot'],
-				exe: 'csgo-hud.exe',
-				name: 'csgo_hud',
+				authors: ['Peter Stather'],
+				exe: 'CSGO-Hud.exe',
+				name: 'CSGO-Hud',
 			},
 		},
 		{
