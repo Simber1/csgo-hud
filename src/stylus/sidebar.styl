@@ -23,6 +23,14 @@
 		transform translateY(-($seriesHeight + 1rem))
 	}
 
+	.rightAd{
+		transition transform .5s ease
+		width 129.2% //Correct allignment
+		&:not(.--active) { //Moves down to match when money leaves
+			transform translateY(62.5%)
+		}
+	}
+
 	.economy,
 	.utility {
 		width 70.75% // TODO should probably not be hardcoded

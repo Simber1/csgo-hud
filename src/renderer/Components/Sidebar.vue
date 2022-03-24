@@ -1,5 +1,8 @@
 <template>
 	<div :class="`sidebar --${direction} --${side}`">
+		<div :class="[`rightAd`, { '--active': freezetime }]" v-if="direction=='right'">
+			<img :src="require('../../img/nuel/Ingame_CSGO_1440p.png').default">
+		</div>
 		<div class="economy-wrapper">
 			<div :class="[`economy --${direction} --${side}`, { '--active': freezetime }]">
 				<div class="loss-bonus">
