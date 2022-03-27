@@ -23,13 +23,74 @@
 		transform translateY(-($seriesHeight + 1rem))
 	}
 
-	.rightAd{
+	.rightAd {
+		position relative
+		margin-left auto
 		transition transform .5s ease
-		width 129.2% //Correct allignment
+		width calc(22.5ch + 2rem  + 16rem)
 		&:not(.--active) { //Moves down to match when money leaves
 			transform translateY(62.5%)
 		}
 	}
+
+	.rightAdBox {
+		position absolute
+		top 6%
+		right 6%
+		transform scale(0.8)
+	}
+
+	@keyframes SidebarImages {
+		0% {
+			opacity:1;
+		}
+		48.5% {
+			opacity:1;
+		}
+		51.5% {
+			opacity:0;
+		}
+		100% {
+			opacity:0;
+		}
+	}
+
+	@keyframes SidebarImagesReverse {
+		0% {
+			opacity:0;
+		}
+		48.5% {
+			opacity:0;
+		}
+		51.5% {
+			opacity:1;
+		}
+		100% {
+			opacity:1;
+		}
+	}
+
+	.twitchStudent{
+		animation-name: SidebarImages;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+		animation-duration: 20s;
+		animation-direction: alternate;
+		right 10%
+		transform scale(0.75)
+		top 4%
+	}
+
+	.intelLogo {
+		animation-name: SidebarImagesReverse;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+		animation-duration: 20s;
+		animation-direction: alternate;
+		
+
+	}
+
 
 	.economy,
 	.utility {
