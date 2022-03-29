@@ -13,6 +13,7 @@
 		<RoundWinner />
 
 		<FocusedPlayer :adr="adr" />
+		<BottomBar />
 		<Sidebars :adr="adr" :directionalSides="directionalSides" />
 	</div>
 
@@ -37,6 +38,7 @@ import Series from './Series'
 import Sidebars from './Sidebars'
 import Timeout from './Timeout'
 import TopBar from './TopBar'
+import BottomBar from './BottomBar'
 
 export default {
 	components: {
@@ -51,6 +53,7 @@ export default {
 		Sidebars,
 		Timeout,
 		TopBar,
+		BottomBar,
 	},
 
 	data() {
