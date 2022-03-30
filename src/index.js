@@ -26,7 +26,7 @@ const createWindow = () => {
 	mainWindow = new BrowserWindow({
 		width: 1280,
 		height: 720,
-		alwaysOnTop: true,
+		alwaysOnTop: true, //Doesnt always work?
 		transparent: true,
 		frame: false,
 		fullscreen: true,
