@@ -40,14 +40,34 @@
 		transform scale(0.8)
 	}
 
-	@keyframes SidebarImages {
+	@keyframes SidebarImageOne {
 		0% {
 			opacity:1;
 		}
-		48.5% {
+		32.5% {
 			opacity:1;
 		}
-		51.5% {
+		33.5% {
+			opacity:0;
+		}
+		100% {
+			opacity:0;
+		}
+	}
+	@keyframes SidebarImageTwo {
+		0% {
+			opacity:0;
+		}
+		32.5% {
+			opacity:0;
+		}
+		33.5% {
+			opacity:1;
+		}
+		66.5% {
+			opacity:1;
+		}
+		67.5% {
 			opacity:0;
 		}
 		100% {
@@ -55,14 +75,14 @@
 		}
 	}
 
-	@keyframes SidebarImagesReverse {
+	@keyframes SidebarImageThree {
 		0% {
 			opacity:0;
 		}
-		48.5% {
+		66.5% {
 			opacity:0;
 		}
-		51.5% {
+		67.5% {
 			opacity:1;
 		}
 		100% {
@@ -70,24 +90,38 @@
 		}
 	}
 
-	.twitchStudent{
-		animation-name: SidebarImages;
+	.amazonUniEsports{
+		animation-name: SidebarImageTwo;
 		animation-timing-function: ease-in-out;
 		animation-iteration-count: infinite;
-		animation-duration: 20s;
+		animation-duration: 30s;
 		animation-direction: alternate;
-		right 10%
-		transform scale(0.75)
+		transform scale(0.6)
+		right -26%
 		top 4%
 	}
 
-	.intelLogo {
-		animation-name: SidebarImagesReverse;
+	.omen {
+		animation-name: SidebarImageOne;
 		animation-timing-function: ease-in-out;
 		animation-iteration-count: infinite;
-		animation-duration: 20s;
+		animation-duration: 30s;
 		animation-direction: alternate;
+		top -17%
+		right 10%
 	}
+
+	.primeStudent {
+		animation-name: SidebarImageThree;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+		animation-duration: 30s;
+		animation-direction: alternate;
+		transform scale(0.3)
+		right -45%
+		top -65%
+	}
+
 
 
 	.economy,

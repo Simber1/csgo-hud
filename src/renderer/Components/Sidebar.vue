@@ -2,8 +2,9 @@
 	<div :class="`sidebar --${direction} --${side}`">
 		<div :class="[`rightAd`, { '--active': freezetime }]" v-if="direction=='right'">
 			<img :src="require('../../img/nuel/Ingame_CSGO_1440p.png').default">
-			<img class="rightAdBox intelLogo" :src="require('../../img/nuel/intel-logo-white.png').default">
-			<img class="rightAdBox twitchStudent" :src="require('../../img/nuel/twitch_student.png').default">
+			<img class="rightAdBox primeStudent" :src="require('../../img/nuel/PrimeStudent_Logo_RGB_White.png').default">
+			<img class="rightAdBox amazonUniEsports" :src="require('../../img/nuel/AUE_LOGO_WHITE.png').default">
+      <img class="rightAdBox omen" :src="require('../../img/nuel/OMEN_logo_Horiz_4c_white.png').default">
 		</div>
 		<div class="economy-wrapper">
 			<div :class="[`economy --${direction} --${side}`, { '--active': freezetime }]">
