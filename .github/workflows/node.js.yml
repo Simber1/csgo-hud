@@ -19,6 +19,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Set outputs
+      id: vars
+      run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
@@ -32,8 +35,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ github.sha }}
-        release_name: "Automatic Release: ${{ github.sha }}"
+        tag_name: ${{ steps.vars.outputs.sha_short }}
+        release_name: "Automatic Release: ${{ steps.vars.outputs.sha_short }}"
         draft: false
         prerelease: false
     - name: Upload Release Asset
