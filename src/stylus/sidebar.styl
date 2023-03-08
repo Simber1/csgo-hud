@@ -19,12 +19,13 @@
 	}
 
 	&.--series-active {
-		$seriesHeight = 17.9rem
+		$seriesHeight = 21rem
 		transform translateY(-($seriesHeight + 1rem))
 	}
 
 	.rightAd {
 		position relative
+		right 2px
 		margin-left auto
 		transition transform .5s ease
 		width calc(22.5ch + 2rem  + 16rem)
@@ -44,10 +45,10 @@
 		0% {
 			opacity:1;
 		}
-		32.5% {
+		48.5% {
 			opacity:1;
 		}
-		33.5% {
+		51.5% {
 			opacity:0;
 		}
 		100% {
@@ -58,31 +59,10 @@
 		0% {
 			opacity:0;
 		}
-		32.5% {
+		48.5% {
 			opacity:0;
 		}
-		33.5% {
-			opacity:1;
-		}
-		66.5% {
-			opacity:1;
-		}
-		67.5% {
-			opacity:0;
-		}
-		100% {
-			opacity:0;
-		}
-	}
-
-	@keyframes SidebarImageThree {
-		0% {
-			opacity:0;
-		}
-		66.5% {
-			opacity:0;
-		}
-		67.5% {
+		51.5% {
 			opacity:1;
 		}
 		100% {
@@ -90,36 +70,51 @@
 		}
 	}
 
-	.amazonUniEsports{
-		animation-name: SidebarImageTwo;
-		animation-timing-function: ease-in-out;
-		animation-iteration-count: infinite;
-		animation-duration: 30s;
-		animation-direction: alternate;
-		transform scale(0.6)
-		right -26%
-		top 4%
-	}
+	//@keyframes SidebarImageThree {
+	//	0% {
+	//		opacity:0;
+	//	}
+	//	66.5% {
+	//		opacity:0;
+	//	}
+	//	67.5% {
+	//		opacity:1;
+	//	}
+	//	100% {
+	//		opacity:1;
+	//	}
+	//}
+
+	//.amazonUniEsports{
+	//	animation-name: SidebarImageTwo;
+	//	animation-timing-function: ease-in-out;
+	//	animation-iteration-count: infinite;
+	//	animation-duration: 30s;
+	//	animation-direction: alternate;
+	//	transform scale(0.6)
+	//	right -26%
+	//	top 4%
+	//}
 
 	.omen {
 		animation-name: SidebarImageOne;
 		animation-timing-function: ease-in-out;
 		animation-iteration-count: infinite;
-		animation-duration: 30s;
+		animation-duration: 20s;
 		animation-direction: alternate;
 		top -17%
 		right 10%
 	}
 
 	.primeStudent {
-		animation-name: SidebarImageThree;
+		animation-name: SidebarImageTwo;
 		animation-timing-function: ease-in-out;
 		animation-iteration-count: infinite;
-		animation-duration: 30s;
+		animation-duration: 20s;
 		animation-direction: alternate;
 		transform scale(0.3)
 		right -45%
-		top -65%
+		top -68%
 	}
 
 
