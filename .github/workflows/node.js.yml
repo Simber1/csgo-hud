@@ -29,17 +29,11 @@ jobs:
     - run: yarn build
     - name: Create Release
       id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: "marvinpinto/action-automatic-releases@latest"
       with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
         tag_name: ${{ env.SHORT_SHA }}
-        release_name: "Automatic Release: ${{ env.SHORT_SHA }}"
+        title: "Automatic Release: ${{ env.SHORT_SHA }}"
+        files: "*.exe"
         draft: false
         prerelease: false
-    - name: Upload release binaries
-      uses: alexellis/upload-assets@0.4.0
-      env:
-        GITHUB_TOKEN: ${{ github.token }}
-      with:
-        asset_paths: '[".\out\make\squirrel.windows\x64\*"]'
