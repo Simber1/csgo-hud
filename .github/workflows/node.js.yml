@@ -19,7 +19,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Set outputs
       id: vars
-      run: echo "SHORT_SHA=$("${{ github.sha }}".SubString(0, 8))" >> $env:GITHUB_ENV
+      run: echo '::set-output name=SHORT_SHA::$("${{ github.sha }}".SubString(0, 8))"'
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
@@ -42,4 +42,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ github.token }}
       with:
-        asset_paths: '[".\out\make\squirrel.windows\x64\*.exe"]'
+        asset_paths: '[".\out\make\squirrel.windows\x64\*"]'
